@@ -1,4 +1,4 @@
-ALGORITHM algorithm_name    // I am a human being
+ALGORITHM algorithm_name    // I am a human being.
 VAR
     nChar : INTEGER:=0;
     nWords : INTEGER:=1;
@@ -13,8 +13,7 @@ BEGIN
             nWords:= nWords+1
         END_IF
         SWITCH (sentence[i]) DO
-            case "a" : nVowels:= nVowels+1;
-                         BREAK; 
+            case "a" : nVowels:= nVowels+1;BREAK; 
             case "e" : nVowels:= nVowels+1; BREAK;
             case "i" : nVowels:= nVowels+1; BREAK;
             case "o" : nVowels:= nVowels+1; BREAK;
