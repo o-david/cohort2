@@ -1,0 +1,34 @@
+ALGORITHM algorithm_name    // I am a human being
+VAR
+    nChar : INTEGER:=0;
+    nWords : INTEGER:=1;
+    nVowels : INTEGER;
+    sentence : STRING;
+    i : INTEGER:= 0;
+BEGIN
+    Read(sentence);
+    WHILE (sentence[i]<>".") DO
+        nChar:= nChar+1
+        IF (sentence[i]=" ") THEN
+            nWords:= nWords+1
+        END_IF
+        SWITCH (sentence[i]) DO
+            case "a" : nVowels:= nVowels+1;
+                         BREAK; 
+            case "e" : nVowels:= nVowels+1; BREAK;
+            case "i" : nVowels:= nVowels+1; BREAK;
+            case "o" : nVowels:= nVowels+1; BREAK;
+            case "u" : nVowels:= nVowels+1; BREAK;
+        END_SWITCH
+        // IF (sentence[i]="a" or sentence[i]="e" or sentence[i]="i" or sentence[i]="o" or sentence[i]="u") THEN
+        //     nVowels:=nVowels+1
+        // END_IF
+
+        i:=i+1
+    END_WHILE
+    nChar=nChar+1;
+
+    Write(nChar)
+    Write(nVowels)
+    Write(nWords)
+END
